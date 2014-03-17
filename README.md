@@ -22,3 +22,11 @@ sudo::config { 'httpd':
   rules    => 'Cmnd_Alias HTTPD = /sbin/service httpd *, /etc/init.d/httpd *'
 }
 ```
+
+License
+-------
+GPL3
+
+Contact
+-------
+breauxaj AT gmail DOT com

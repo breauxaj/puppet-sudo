@@ -1,9 +1,11 @@
-class sudo {
+class sudo (
+  $ensure = 'latest'
+){
   $required = $::operatingsystem ? {
     /(?i-mx:centos|fedora|redhat|scientific)/ => 'sudo',
   }
 
-  package { $required: ensure => latest }
+  package { $required: ensure => $ensure }
 
   file { '/etc/sudoers.d':
     ensure  => directory,
